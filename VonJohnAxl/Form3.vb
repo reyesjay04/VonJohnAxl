@@ -37,8 +37,8 @@
     Public Sub transaction()
         Try
             table = "reports"
-            fields = "`transaction_number`, `user_id`, `total`, `cash_change`, `active`"
-            values = "('" & TextBox2.Text & "', '" & ClientID & "', " & TextBoxGRANDTOTAL.Text & ", " & TextBox3.Text & "," & 1 & ")"
+            fields = "`transaction_number`, `user_id`, `total`, `cash_change`, `active`, `cash`, `transaction_date`"
+            values = "('" & TextBox2.Text & "', '" & ClientID & "', " & TextBoxGRANDTOTAL.Text & ", " & TextBox3.Text & "," & 1 & ", " & TextBox1.Text & ", '" & Format(Now(), "yyyy-MM-dd hh:ss:mm") & "')"
             insert(table, fields, values)
             With DataGridViewOrders
                 For i As Integer = 0 To .Rows.Count - 1 Step +1
@@ -48,12 +48,16 @@
                     insert(table, fields, values)
                 Next
             End With
-            MsgBox("Tangina mo")
             TextBox2.Text = Format(Now(), "yyyyMMddHHmmss")
             DataGridViewOrders.Rows.Clear()
             TextBoxGRANDTOTAL.Text = SumOfColumnsToDecimal(DataGridViewOrders, 3)
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Enabled = False
+        MENUFORM.Show()
     End Sub
 End Class

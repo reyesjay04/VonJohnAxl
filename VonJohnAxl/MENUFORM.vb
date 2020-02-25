@@ -52,6 +52,7 @@ Public Class MENUFORM
         'Use My.Computer.Clipboard.GetText() or My.Computer.Clipboard.GetData to retrieve information from the clipboard.
     End Sub
 
+
     Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.LayoutMdi(MdiLayout.Cascade)
     End Sub
@@ -77,4 +78,96 @@ Public Class MENUFORM
 
     Private m_ChildFormNumber As Integer
 
+    Private Sub StatusBarToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        Dim newMDIchild As New Reports()
+        If Application.OpenForms().OfType(Of Reports).Any Then
+        Else
+            'btndefaut(defaultcolor:=Button5)
+            'btncolor(changecolor:=Button5)
+            'formclose(closeform:=ManageProducts)
+            newMDIchild.MdiParent = Me
+            newMDIchild.ShowIcon = False
+            newMDIchild.Show()
+        End If
+    End Sub
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim newMDIchild As New Reports()
+        If Application.OpenForms().OfType(Of Reports).Any Then
+        Else
+            btndefaut(defaultcolor:=Button1)
+            btncolor(changecolor:=Button1)
+            formclose(closeform:=Reports)
+            newMDIchild.MdiParent = Me
+            newMDIchild.ShowIcon = False
+            newMDIchild.Show()
+        End If
+    End Sub
+    Private Sub MENUFORM_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Form3.Enabled = True
+    End Sub
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Close()
+    End Sub
+    Private Sub MENUFORM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim newMDIchild As New Dashboard()
+        If Application.OpenForms().OfType(Of Dashboard).Any Then
+        Else
+            btndefaut(defaultcolor:=Button3)
+            btncolor(changecolor:=Button3)
+            formclose(closeform:=Dashboard)
+            newMDIchild.MdiParent = Me
+            newMDIchild.ShowIcon = False
+            newMDIchild.Show()
+        End If
+    End Sub
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim newMDIchild As New Dashboard()
+        If Application.OpenForms().OfType(Of Dashboard).Any Then
+        Else
+            btndefaut(defaultcolor:=Button3)
+            btncolor(changecolor:=Button3)
+            formclose(closeform:=Dashboard)
+            newMDIchild.MdiParent = Me
+            newMDIchild.ShowIcon = False
+            newMDIchild.Show()
+        End If
+    End Sub
+    Public Sub btncolor(ByVal changecolor As Button)
+        changecolor.ForeColor = Color.Black
+        changecolor.BackColor = Color.White
+    End Sub
+
+    Public Sub btndefaut(ByVal defaultcolor As Button)
+        For Each P As Control In Controls
+            If TypeOf P Is Panel Then
+                For Each ctrl As Control In P.Controls
+                    If TypeOf ctrl Is Button Then
+                        If ctrl.Name <> defaultcolor.Name Then
+                            CType(ctrl, Button).ForeColor = Color.White
+                            CType(ctrl, Button).BackColor = Color.FromArgb(243, 119, 54)
+                        End If
+                    End If
+                Next
+            End If
+        Next
+    End Sub
+    Public Sub formclose(ByVal closeform As Form)
+        Try
+            For Each P As Control In Controls
+                For Each ctrl As Control In P.Controls
+                    If TypeOf ctrl Is Form Then
+                        If ctrl.Name <> closeform.Name Then
+                            CType(ctrl, Form).FindForm.Hide()
+                        End If
+                    End If
+                Next
+            Next
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+    End Sub
 End Class

@@ -117,47 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAHhJREFUWEft
-        lEsOQEAQRGflTjif3z1xDepNYmfR0iIW9ZK3mEWXxqSKMX+lkYvc5ZF0k5MkM8ws78IyjjIMWzPU1lOO
-        TpJFZphrAYaz9JKstZ6C8M8YetNBhuHCsMT1JTLy5jz80SU07gH3gHvAuAfcA+4BYz6ilBM6dQhDaNKC
-        iQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="Button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAlRJREFUWEfV
-        1knIjVEcx/FrHmJBvcTOXCJTmTKUoZRhRVFWiIXwliI2ipQFsjJLCUmKjSgLQ7JiZasUhaRkyjx8v+97
-        /7fr5t7z3Oc+qfdXn7r3PM8959xzznOeU+pq6YXF2IsLuFF2EfuwAgNReMbjHN7id8IXXMIMtJyhOI0f
-        qG3oM56W2WjtdV3BMOTKNDxHVPYT17EBw1Eby9bjJqo7/AYL0FSW4xOikluYiqyZhHuI33/HSmTKFETj
-        /utd6IZm42+24xes6xvGomGG4Bmi8dVoNWvxFdY30YJGOYYYtt0WFBT/+YTOj/UzDs6Vjd9GnmFvKT5u
-        Nu6cTbeggPTHeRxHXwvqpQdeww644ovKEsSUumPW7cQ8xI2bLSgoNvgIyU644OKmkRYUmEFIduIMvOij
-        0tOCRFyg87Eqo434iLqdcM/2wsuOb+lsQVSW1yFUEh141fEtnU2orbBZB1DJKVjoFPjOzxJfVosyWoP3
-        iMavoTcq2Ym4ONqCAtOGx4j6r+Kvxs1sxA1bLSgoA5Bs3HSH8+9NdywoKMuQbDzidhk3z7GggPTDWRxE
-        cm25AfnatAMP4Kj89xxBjMJ+CwqKJ6SZnR8bx23zCeyAb8V1aDXugp4RrW+yBal4BH+H6IQjkWc6/M0e
-        xIh6ch6FTHHziE7INTEXWTMLD1Hd+FI0FUcipiPcRTvGoHpV94HHrm24jziI6gXsUK64Jg4jno5qNuLe
-        EftHLbd1H8HBaDkjcBS+Lf/VWLUP8HiXPAHniQvL4dyBE7hcdhK+TxbC6egqKZX+AJlg8WiJ7a6eAAAA
-        AElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="BackgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>34</value>
   </metadata>
 </root>

@@ -21,6 +21,7 @@ Module Functions
     Public table As String
     Public fields As String
     Public values As String
+    Public ds As DataSet
     Public Sub GetConnected()
         Try
             conn = New MySqlConnection
@@ -176,4 +177,40 @@ Module Functions
             MsgBox(ex.ToString)
         End Try
     End Sub
+    Dim returncount As String
+    Public Function count(ByVal tocount As String, ByVal table As String)
+        Try
+            GetConnected()
+            query = "SELECT COUNT(" & tocount & ") FROM " & table
+            da = New MySqlDataAdapter(query, conn)
+            dt = New DataTable
+            da.Fill(dt)
+            For Each row As DataRow In dt.Rows
+                returncount = row("COUNT(" & tocount & ")")
+            Next
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Return returncount
+    End Function
+    Dim returnsum
+    Public Function sum(ByVal tototal As String, ByVal table As String)
+        Try
+            GetConnected()
+            query = "SELECT SUM(" & tototal & ") FROM " & table
+            da = New MySqlDataAdapter(query, conn)
+            dt = New DataTable
+            da.Fill(dt)
+            If IsDBNull(dt.Rows(0)(0)) Then
+                returnsum = 0
+            Else
+                For Each row As DataRow In dt.Rows
+                    returnsum = row("SUM(" & tototal & ")")
+                Next
+            End If
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Return returnsum
+    End Function
 End Module
